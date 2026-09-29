@@ -86,4 +86,3 @@ function MovieResults({ searchResults, movies, isLoading }: MovieResultsProps) {
 }
 
 export default MovieResults;
-gi
