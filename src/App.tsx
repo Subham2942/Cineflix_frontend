@@ -64,7 +64,9 @@ function App() {
     loadMovies();
   }, []);
 
-  const displayedMovieCount = searchResults?.length === 0 ? movies.length : searchResults?.length;
+  const displayedMovieCount = searchResults && searchResults.length > 0
+    ? searchResults.length
+    : movies.length;
   const movieCountLabel = displayedMovieCount === 1 ? "movie" : "movies";
   const resultsSummary = isLoading
     ? "Searching the catalog…"
